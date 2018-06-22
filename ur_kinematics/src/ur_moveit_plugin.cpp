@@ -175,7 +175,7 @@ bool URKinematicsPlugin::initialize(const std::string &robot_description,
 
   ros::NodeHandle private_handle("~");
   rdf_loader::RDFLoader rdf_loader(robot_description_);
-  const boost::shared_ptr<srdf::Model> &srdf = rdf_loader.getSRDF();
+  const std::shared_ptr<srdf::Model> &srdf = rdf_loader.getSRDF();
 #if ROS_VERSION_MINIMUM(1, 13, 0) 
   const std::shared_ptr<urdf::ModelInterface>& urdf_model = rdf_loader.getURDF();
 #else
